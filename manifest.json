@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Redirect Plugin",
+    "description": "This extension will redirect to google.com if loaded page contains 'videos' in description meta tag",
+    "version": "1.0",
+  
+    "browser_action": {
+     "default_icon": "redirect_videos.png"
+    },
+    "permissions": [
+     "activeTab"
+     ],
+     "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "js": ["redirect.js"]
+        }
+      ]
+  }
